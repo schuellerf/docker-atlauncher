@@ -2,6 +2,8 @@
 cd /tmp
 sudo rm -f *
 
-echo $VNCPASS | vncpasswd -f > /root/vncpass
+mkdir -p /root/.vnc
+
+echo $VNCPASS | vncpasswd -f > /root/.vnc/passwd
 
 vncserver :1 -geometry 1280x800 -depth 24
