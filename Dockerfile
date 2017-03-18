@@ -1,7 +1,7 @@
 FROM openjdk:8u121-jre
 MAINTAINER Jon Schulberger <jschoulzy@gmail.com>
 
-EXPOSE 25565
+EXPOSE 5901 25565
 
 RUN apt-get update && \
     apt-get -y install \
