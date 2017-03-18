@@ -14,7 +14,8 @@ RUN apt-get update && \
 
 USER atlauncher
 
-WORKDIR /home/atlauncher
+RUN mkdir -p /home/atlauncher/ATLauncher
+WORKDIR /home/atlauncher/ATLauncher
 
 RUN wget https://download.nodecdn.net/containers/atl/ATLauncher.jar
 
