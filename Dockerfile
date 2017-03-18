@@ -3,14 +3,18 @@ MAINTAINER Jon Schulberger <jschoulzy@gmail.com>
 
 EXPOSE 5901 25565
 
+RUN adduser atlauncher sudo --disabled-login
+
 RUN apt-get update && \
     apt-get -y install \
     wget \
     lxde-core \
     tightvncserver && \
     rm -rf /var/lib/apt/lists/*
-    
-WORKDIR /root
+
+USER atlauncher
+
+WORKDIR /home/atlauncher
 
 RUN wget https://download.nodecdn.net/containers/atl/ATLauncher.jar
 
