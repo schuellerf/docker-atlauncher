@@ -16,6 +16,6 @@ RUN wget https://download.nodecdn.net/containers/atl/ATLauncher.jar
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod u+x /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 CMD ["/entrypoint.sh"]
