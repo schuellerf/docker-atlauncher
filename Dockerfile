@@ -6,7 +6,7 @@ EXPOSE 25565
 RUN apt-get update && \
     apt-get -y install \
     wget \
-    lxde-core
+    lxde-core \
     tightvncserver && \
     rm -rf /var/lib/apt/lists/*
     
