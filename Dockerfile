@@ -4,7 +4,7 @@ MAINTAINER Jon Schulberger <jschoulzy@gmail.com>
 EXPOSE 25565
 
 RUN apt-get update && \
-    apt-get install \
+    apt-get -y install \
     wget \
     lxde-core
     tightvncserver && \
