@@ -3,7 +3,8 @@ MAINTAINER Jon Schulberger <jschoulzy@gmail.com>
 
 EXPOSE 5901 25565
 
-RUN adduser atlauncher sudo --disabled-login
+RUN adduser atlauncher --disabled-login
+RUN adduser atlauncher sudo
 
 RUN apt-get update && \
     apt-get -y install \
