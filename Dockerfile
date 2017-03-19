@@ -20,8 +20,8 @@ WORKDIR /home/atlauncher/ATLauncher
 
 RUN wget https://download.nodecdn.net/containers/atl/ATLauncher.jar
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /home/atlauncher/entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+RUN sudo chmod +x /home/atlauncher/entrypoint.sh
 
-CMD ["/entrypoint.sh"]
+CMD ["/home/atlauncher/entrypoint.sh"]
